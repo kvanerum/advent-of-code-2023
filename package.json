@@ -1,0 +1,26 @@
+{
+  "name": "advent-of-code-2023",
+  "workspaces": [
+    "packages/*"
+  ],
+  "private": true,
+  "scripts": {
+    "lint": "eslint \"**/*.ts\"",
+    "lint-fix": "eslint \"**/*.ts\" --fix",
+    "prettier": "prettier . -w -l",
+    "ci": "bun run lint && bun run prettier",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.13.1",
+    "eslint": "^8.54.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-standard-with-typescript": "^40.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-n": "^16.3.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "husky": "^8.0.0",
+    "prettier": "^3.1.0",
+    "typescript": "^5.3.2"
+  }
+}

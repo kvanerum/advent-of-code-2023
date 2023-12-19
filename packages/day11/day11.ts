@@ -1,7 +1,4 @@
-interface Position {
-  row: number;
-  column: number;
-}
+import { Position } from "../../util/position.ts";
 
 const input = await readInput("input.txt");
 
@@ -70,10 +67,7 @@ function getGalaxyPositions(map: string[][]): Position[] {
   for (let row = 0; row < map.length; ++row) {
     for (let column = 0; column < map[row].length; ++column) {
       if (map[row][column] === "#") {
-        result.push({
-          row,
-          column,
-        });
+        result.push(new Position(row, column));
       }
     }
   }

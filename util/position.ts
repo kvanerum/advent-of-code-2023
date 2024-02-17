@@ -59,3 +59,8 @@ export class Position {
 export function P(row: number, column: number): Position {
   return new Position(row, column);
 }
+
+export function parsePosition(str: string): Position {
+  const split = str.split(",");
+  return P(parseInt(split[0]), parseInt(split[1]));
+}
